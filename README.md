@@ -4,6 +4,11 @@
 > **我是大一2026级新生，这个项目是我在课余时间制作的。我将独立设计、推演并打板CPU项目。由于预算有限，我只能使用嘉立创每月两次的免费打板额度，且打样过程中也可能出现坏板。但无论成功还是失败，我都会积极地和大家分享整个过程！**
 > *(I am a 2026 freshman, and this project is built in my spare time. I will independently design, deduce, and fabricate this CPU. Due to a limited budget, I can only rely on JLC's free PCB prototyping quota (twice a month), and failed boards during the process are inevitable. However, I will actively share the entire journey with you, whether it's a success or a failure!)*
 
+ ## 💬 反馈与交流 (Feedback & Communication)
+
+**作为一名硬件初学者，我的设计水平还有很大的提升空间。如果大家在原理图、PCB走线或代码逻辑上发现任何问题，或者有更好的建议，非常欢迎通过 Issues 向我提出！我会虚心学习，并尽我最大的努力去修正。感谢大家的支持！**
+*(As a hardware beginner, my design skills still have much room for improvement. If you find any problems in the schematics, PCB routing, or code logic, or if you have any better suggestions, please feel free to bring them up via Issues! I will humbly learn from them and try my best to make corrections. Thank you for your support!)*
+
 ## 🚧 项目状态 (Project Status)
 **v0.1-alpha 早期原型版**：目前正在 PCB 打样与实物焊接阶段，可能存在尚未发现的逻辑 Bug，将持续更新。
 *(Early Prototype: Currently undergoing PCB fabrication and hardware assembly. There may be undiscovered logic bugs, and updates will be continuous.)*
