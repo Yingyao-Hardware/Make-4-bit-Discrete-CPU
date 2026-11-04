@@ -28,6 +28,8 @@
 - **非嘉立创用户 (For Other EDA Users, e.g., Altium, KiCad)**: 由于软件生态限制，你可以使用通用的 **Gerber 文件** 进行生产制造，并使用 **PDF 格式的原理图** 查看电路逻辑。
   *(Due to software ecosystem limitations, you can use the universal Gerber files for manufacturing and view the circuit logic via PDF schematics.)*
 
-## 🛠️ 踩坑日记 (Debugging Log)
-- 发现使用 10K 电阻驱动三极管基极会导致无法翻转，已更改为 1K-4.7K 解决扇出问题。
-  *(Discovered that using a 10K resistor to drive the transistor base causes failure to toggle. Changed to 1K-4.7K to fix it.)*
+## 🛠️ 开发日志与避坑指南 (Dev Log & Pitfalls)
+
+> **CN:** 硬件开发充满了不确定性。为了记录真实的成长过程，我专门建立了一份**《踩坑日志》**。里面详细记录了我从原理图设计到PCB打样过程中遇到的每一个Bug、每一次炸机以及最终的解决方案。**失败是成功之母，这些“翻车”经验或许比成功更值得参考！**
+>
+> **EN:** Hardware development is full of uncertainties. To document the real growth process, I have created a dedicated **"Pitfalls & Lessons Learned"** file. It details every bug, every "magic smoke" moment, and the final solutions encountered from schematic design to PCB prototyping. **Failure is the mother of success, and these "oops" moments might be even more valuable references than success!**
