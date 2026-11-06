@@ -1,0 +1,11 @@
+踩坑Number one：
+在制作D触发器的时候没有加复位功能，所以那几块D触发器的PCB成为废板了！只能当演示工具用了。
+(Pitfall No. 1: I forgot to add a reset function when building the D flip-flops, so those PCBs became scrap boards and can now only be used for demonstration.)
+
+踩坑Number two：
+在绘制PC核心的时候忘记加自加器（增量器），幸好在画图的时候发现了，但是还是废了一张草图。
+(Pitfall No. 2: I forgot to add the incrementer when designing the PC core. Fortunately, I caught it during drafting, but it still wasted one sketch.)
+
+踩坑Number three：
+突然发现2N3904不能完全替代2N3906！一个适合拉到高电平，一个适合拉到低电平！一个是PNP一个是NPN，我有一个好记的方法，P喜欢进攻，N容易被进攻，所以PNP中基极是输出电流的，而NPN的基极是输入电流的。
+(Pitfall No. 3: I suddenly realized that a 2N3904 (NPN) cannot completely replace a 2N3906 (PNP)! One is suitable for pulling HIGH, and the other for pulling LOW. I have a good mnemonic: P likes to attack (source), while N is easily attacked (sink). In a PNP transistor, current flows OUT of the base; in an NPN, it flows INTO the base.)
