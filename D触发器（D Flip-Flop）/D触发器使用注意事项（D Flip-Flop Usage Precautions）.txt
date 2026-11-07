@@ -1,0 +1,67 @@
+【设计声明】
+本项目的 D 触发器逻辑架构基于网络经典的主从 D 触发器（NAND 门结构）进行参考，但所有的晶体管级物理实现、PCB 布局走线、电源分配以及踩坑排雷，均为作者独立完成。
+
+Design Statement: The logic architecture of this D flip-flop is based on the classic master-slave D flip-flop (NAND gate structure) found online. However, all transistor-level physical implementations, PCB layouts, power distribution, and debugging processes are independently completed by the author.
+
+
+D触发器使用注意事项 / D Flip-Flop Usage Precautions
+【模块组成】 / [Module Composition]
+纯分立元件（2N3904 + 1N4148）手搓 D 触发器，带复位功能。
+Hand-built D Flip-Flop using pure discrete components (2N3904 + 1N4148), with Reset function.
+
+【使用注意事项】 / [Usage Notes]
+
+VCC 接 5V，GND 接地。
+Connect VCC to 5V, GND to Ground.
+
+D 接数据，CP 接时钟（按键），Reset 接复位。
+Connect D to Data, CP to Clock (push button), Reset to Reset.
+
+Q 和 Q' 是输出。
+Q and Q' are outputs.
+
+V1.0：初代版本，因复位逻辑存在致命短路缺陷，成为废案。
+V1.0: Initial version. Scrapped due to a fatal short-circuit flaw in the reset logic.
+
+V2.0：V1.0 的补线抢救版，但后期复盘发现依然存在设计漏洞。
+V2.0: A wire-fix version of V1.0. However, further review revealed remaining design flaws.
+
+V3.0：全新架构双核版（当前版本）。彻底重构了逻辑，修复了所有已知问题。
+V3.0: New Dual-Core Architecture (Current Version). Completely refactored the logic, fixed all known issues.
+
+关于双核设计的补充说明：采用双核心模块化设计，是为了极限压榨物理空间与成本，毕竟嘉立创每个月只有两次免费打板额度。
+
+Note on Dual-Core Design: The dual-core modular design is a strategic move to maximize physical space and minimize costs, taking full advantage of the fact that JLCPCB only offers two free PCB prototyping quotas per month.
+
+【容易踩坑的点】 / [Common Pitfalls]
+
+1. 复位线（Reset）必须接好。
+The Reset line MUST be properly connected.
+
+结果：悬空或者接错地，数据会直接锁死在 0，按什么都没反应。
+
+Result: If it's floating or connected to the wrong ground, the data will be locked at 0, and pressing anything will do nothing.
+
+2. 时钟线（CP）绝对不能悬空！
+The Clock line (CP) must NEVER be left floating!
+
+结果：如果你把时钟线拔了，或者悬空放那儿，Q 端会输出 5.1V，但 Q' 端会给你搞出一个 3.9V 的变态半高电平。
+
+Result: If you unplug the clock line or leave it floating, the Q output will be 5.1V, but the Q' output will give you a weird 3.9V half-high level.
+
+注意：时钟切换的时候，必须接 VCC 或者拉回 GND，千万别让悬空在空中！否则会在 Q' 端出现幽灵电压，比如我的测量值就是不高不低的 3.9V。
+
+Note: When switching the clock, it must be connected to VCC or pulled back to GND. Never let it float in the air! Otherwise, a "ghost voltage" will appear at the Q' terminal (e.g., my measured value was exactly that awkward 3.9V).
+
+3. 漏连导线（飞线抢救）。
+Missing wire connection (Flying wire rescue).
+
+结果：V1.0 版本因为画图少连了一根线，直接不工作。
+
+Result: V1.0 didn't work at all because I missed connecting one wire in the schematic.
+
+怎么办：拿根线飞线硬连上去，板子就活了，但是我给出了 V2.0，不使用 1.0 就可以了，但是依然有重大缺陷。
+Solution: Hardwired it with a flying wire and the board came alive. However, I released V2.0, so you can just ignore V1.0. But V2.0 still has major flaws.
+
+4.重制D触发器核心，用时一下午，推出V3.0双核版本，是目前的稳定版。
+Refactored the D Flip-Flop core in just one afternoon and rolled out V3.0 (Dual-Core), which is now the current stable version.
