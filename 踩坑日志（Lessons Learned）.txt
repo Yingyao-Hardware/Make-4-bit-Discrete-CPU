@@ -9,3 +9,7 @@
 踩坑Number three：
 突然发现2N3904不能完全替代2N3906！一个适合拉到高电平，一个适合拉到低电平！一个是PNP一个是NPN，我有一个好记的方法，P喜欢进攻，N容易被进攻，所以PNP中基极是输出电流的，而NPN的基极是输入电流的。
 (Pitfall No. 3: I suddenly realized that a 2N3904 (NPN) cannot completely replace a 2N3906 (PNP)! One is suitable for pulling HIGH, and the other for pulling LOW. I have a good mnemonic: P likes to attack (source), while N is easily attacked (sink). In a PNP transistor, current flows OUT of the base; in an NPN, it flows INTO the base.)
+
+踩坑Number four:
+理论加法器，也就是网上流传的那种没有注意三极管压降，如果是四个加法器连在一起的话就会出现问题！最后那个加法器输出1产生的电压可能连LED都驱动不了！
+(Pitfall No. 4: Theoretical adders—like the ones commonly found online—ignore transistor voltage drops. If four adders are cascaded, problems will occur! The voltage produced when the final adder outputs a logic '1' might be too low to even drive an LED!)
