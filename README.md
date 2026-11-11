@@ -14,10 +14,7 @@
 *(Early Prototype: Currently undergoing PCB fabrication and hardware assembly. There may be undiscovered logic bugs, and updates will be continuous.)*
 
 ## 🧩 已完成模块 (Completed Modules)
-- **4-bit ALU (加/减法核心)**: 基于逻辑门与分立三极管搭建，独立推演拓扑连线。
-  *(4-bit ALU: Built with logic gates and discrete transistors, topology independently deduced.)*
-- **4-bit ACC Register (累加寄存器核心)**: 基于 4 个 D 触发器构成的存储单元。
-  *(4-bit ACC Register: A storage unit composed of 4 D-Flip-Flops.)*
+
 
 ## 📁 项目文件格式说明 (Project File Formats)
 本项目使用 **嘉立创 EDA 专业版 (EasyEDA Pro)** 进行开发。
