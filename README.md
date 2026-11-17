@@ -14,6 +14,7 @@
 *(Early Prototype: Currently undergoing PCB fabrication and hardware assembly. There may be undiscovered logic bugs, and updates will be continuous.)*
 
 ## 🧩 已完成模块 (Completed Modules)
+D触发器（D Flip-Flop）
 
 
 ## 📁 项目文件格式说明 (Project File Formats)
