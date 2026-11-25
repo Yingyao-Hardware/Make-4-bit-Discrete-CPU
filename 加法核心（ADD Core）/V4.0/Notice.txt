@@ -1,0 +1,4 @@
+注意：
+因为V4.0是最后测试出的电路图，只是改变了电阻阻值，所以PCB图纸和V3.0一样，这里不再专门为其设计PCB，请大家谅解！
+
+Notice: Since V4.0 is the final tested circuit, and the only modification from V3.0 is the resistor values, the PCB layout remains identical to V3.0. Therefore, a dedicated PCB design for V4.0 will not be provided. Thank you for your understanding!
