@@ -15,7 +15,8 @@
 
 ## 🧩 已完成模块 (Completed Modules)
 1.D触发器（D Flip-Flop）
-2.加法核心（ADD_Core）
+2.选择器（MUX）
+3.加法核心（ADD_Core）
 
 
 ## 📁 项目文件格式说明 (Project File Formats)
