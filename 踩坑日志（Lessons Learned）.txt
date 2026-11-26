@@ -17,3 +17,7 @@
 踩坑Number five:
 门电路的输出端应该在三极管的集电极，最好不要在发射级，因为这样可能会有电压拉不高的问题。
 (The output of a logic gate should be taken from the collector of the transistor, not the emitter, as this might cause issues with the voltage not pulling up high enough.)
+
+踩坑Number six:
+当使用多个分立元件门电路的时候，要注意考虑上一级的上拉或下拉电阻的影响，不然会让整体瘫痪！
+(When using multiple discrete logic gates, you must consider the impact of the previous stage's pull-up or pull-down resistors. Otherwise, the whole system will crash!)
